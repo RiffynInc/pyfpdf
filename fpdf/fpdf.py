@@ -1019,15 +1019,15 @@ class FPDF(object):
                     except:
                         pass
                 #last resource
-                if not succeed_parsing:
-                    mtd='_parse'+type
-                    if not hasattr(self,mtd):
-                        self.error('Unsupported image type: '+type)
-                    info=getattr(self, mtd)(name)
-                mtd='_parse'+type
-                if not hasattr(self,mtd):
-                    self.error('Unsupported image type: '+type)
-                info=getattr(self, mtd)(name)
+                # if not succeed_parsing:
+                #     mtd='_parse'+type
+                #     if not hasattr(self,mtd):
+                #         self.error('Unsupported image type: '+type)
+                #     info=getattr(self, mtd)(name)
+                # mtd='_parse'+type
+                # if not hasattr(self,mtd):
+                #     self.error('Unsupported image type: '+type)
+                # info=getattr(self, mtd)(name)
             info['i']=len(self.images)+1
             # is_mask and mask_image
             if is_mask and info['cs'] != 'DeviceGray':
